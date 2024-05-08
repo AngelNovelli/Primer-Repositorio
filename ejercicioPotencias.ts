@@ -10,10 +10,13 @@ function calcularPotencia (base : number, exponente: number) : number {
     return resultado;
 }
 
-if (exponente < 0) {
+while (exponente < 0) {
     console.log ("No se admiten exponentes negativos.");
+    exponente = rls.questionInt("Ingrese un exponente positivo: ");
 }
-    else {
+    if (exponente > 0) {
         resultadoFuncion = calcularPotencia(base,exponente);
         console.log ("La potencia del número es: ",resultadoFuncion);
     }
+
+
